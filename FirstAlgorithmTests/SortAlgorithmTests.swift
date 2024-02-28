@@ -1,5 +1,5 @@
 //
-//  FirstAlgorithmTests.swift
+//  SortAlgorithmTests.swift
 //  FirstAlgorithmTests
 //
 //  Created by David Bautista on 27/02/24.
@@ -8,14 +8,14 @@
 import XCTest
 @testable import FirstAlgorithm
 
-final class FirstAlgorithmTests: XCTestCase {
+final class SortAlgorithmTests: XCTestCase {
   
-  private var sut: AlgorithmViewModel!
+  private var sut: SortAlgorithmViewModel!
   private var sortTextUseCase: SortTextUseCase!
   
   override func setUp() {
     sortTextUseCase = SortTextUseCase()
-    sut = AlgorithmViewModel(useCases: AlgorithmViewModel.UseCases(sortText: sortTextUseCase))
+    sut = SortAlgorithmViewModel(useCases: SortAlgorithmViewModel.UseCases(sortText: sortTextUseCase))
   }
 
   override func tearDown() {

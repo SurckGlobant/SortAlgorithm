@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
-    let algorithmViewController:UIViewController = AlgorithmFactory().algorithmViewController()
+    let algorithmViewController:UIViewController = AlgorithmFactory().pageViewController()
     let navigationController: UINavigationController = UINavigationController(rootViewController: algorithmViewController)
     let window:UIWindow = UIWindow(windowScene: windowScene)
     window.rootViewController = navigationController

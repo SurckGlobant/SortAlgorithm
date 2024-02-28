@@ -1,12 +1,12 @@
 //
-//  AlgorithmViewModelProtocol.swift
+//  SortAlgorithmViewModelProtocol.swift
 //  FirstAlgorithm
 //
 //  Created by David Bautista on 27/02/24.
 //
 
-//MARK: - AlgorithmViewModelProtocol - protocol
-protocol AlgorithmViewModelProtocol{
+//MARK: - SortAlgorithmViewModelProtocol - protocol
+protocol SortAlgorithmViewModelProtocol{
   func sortText(text: String) -> String
 }
 

@@ -1,5 +1,5 @@
 //
-//  AlgorithmViewModel.swift
+//  SortAlgorithmViewModel.swift
 //  FirstAlgorithm
 //
 //  Created by David Bautista on 27/02/24.
@@ -7,7 +7,7 @@
 
 //MARK: - AlgorithmViewModel - class
 
-final class AlgorithmViewModel: AlgorithmViewModelProtocol{
+final class SortAlgorithmViewModel: SortAlgorithmViewModelProtocol{
   
   //MARK: - Variables
   let useCases: UseCases
@@ -23,7 +23,7 @@ final class AlgorithmViewModel: AlgorithmViewModelProtocol{
   }
 }
 
-extension AlgorithmViewModel {
+extension SortAlgorithmViewModel {
   struct UseCases {
     let sortText:SortTextUseCaseProtocol
   }

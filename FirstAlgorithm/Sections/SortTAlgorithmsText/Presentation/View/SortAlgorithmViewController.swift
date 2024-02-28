@@ -1,5 +1,5 @@
 //
-//  AlgorithmViewController.swift
+//  SortAlgorithmViewController.swift
 //  FirstAlgorithm
 //
 //  Created by David Bautista on 27/02/24.
@@ -7,10 +7,19 @@
 
 import UIKit
 
-//MARK: - AlgorithmViewController - class
-final class AlgorithmViewController: UIViewController {
+//MARK: - SortAlgorithmViewController - class
+final class SortAlgorithmViewController: UIViewController {
   
   //MARK: - UI
+  let titleLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Sorting algorithm"
+    label.textAlignment = .center
+    label.numberOfLines = 0
+    label.translatesAutoresizingMaskIntoConstraints = false
+    return label
+  }()
+  
   let rulesLabel: UILabel = {
     let label = UILabel()
     label.text = "Rules\n\n- Numbers go after Letters\n- Uppercase letters go after Lowercase\n- Odd numbers go before Even numbers\n- Any character that is not a letter or number should go after the letters and numbers"
@@ -46,10 +55,10 @@ final class AlgorithmViewController: UIViewController {
   }()
   
   //MARK: - Variables
-  var viewModel: AlgorithmViewModelProtocol
+  var viewModel: SortAlgorithmViewModelProtocol
   
   //MARK: - Init class
-  init(viewModel: AlgorithmViewModelProtocol) {
+  init(viewModel: SortAlgorithmViewModelProtocol) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
     self.setupUI()
@@ -68,10 +77,10 @@ final class AlgorithmViewController: UIViewController {
   
   //MARK: - SetupUI methods
   private func setupUI() {
-    title = "Sorting algorithm"
     view.backgroundColor = .systemBackground
     self.navigationController?.navigationBar.prefersLargeTitles = true
     
+    view.addSubview(titleLabel)
     view.addSubview(rulesLabel)
     view.addSubview(inputTextField)
     view.addSubview(sortButton)
@@ -81,7 +90,11 @@ final class AlgorithmViewController: UIViewController {
   
   private func setConstraints() {
     NSLayoutConstraint.activate([
-      rulesLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+      titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+      titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+      titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+      
+      rulesLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
       rulesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
       rulesLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
       
@@ -101,7 +114,7 @@ final class AlgorithmViewController: UIViewController {
   
   //MARK: - Actions
   @objc func sortText() {
-    let result = self.viewModel.sortText(text: self.inputTextField.text ?? "")
+    let result:String = self.viewModel.sortText(text: self.inputTextField.text ?? "")
     resultLabel.text = "Result:\n \(result)"
   }
 }
