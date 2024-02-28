@@ -77,9 +77,6 @@ final class AlgorithmViewController: UIViewController {
     view.addSubview(sortButton)
     self.sortButton.addTarget(self, action: #selector(sortText), for: .touchUpInside)
     view.addSubview(resultLabel)
-    
-    
-    self.inputTextField.text = "aB4cD3eFg5®hIjKl2Mn1OpqR6sT9uVwX0yZ"
   }
   
   private func setConstraints() {
@@ -104,7 +101,7 @@ final class AlgorithmViewController: UIViewController {
   
   //MARK: - Actions
   @objc func sortText() {
-    let cadenaOrdenada = self.viewModel.sortText(text: self.inputTextField.text ?? "")
-    resultLabel.text = "Result:\n \(cadenaOrdenada)"
+    let result = self.viewModel.sortText(text: self.inputTextField.text ?? "")
+    resultLabel.text = "Result:\n \(result)"
   }
 }

@@ -27,5 +27,6 @@ final class FirstAlgorithmTests: XCTestCase {
     XCTAssertEqual("aceghjlnpqsuwyBDFIKMORTVXZ13590246®", sut.sortText(text: "aB4cD3eFg5®hIjKl2Mn1OpqR6sT9uVwX0yZ"))
     XCTAssertEqual("abeCD4®", sut.sortText(text: "®DbeCa4"))
     XCTAssertEqual("jjnW7024==", sut.sortText(text: "4jn70Wj==2"))
+    XCTAssertEqual("acgimnorruçîAIPR1÷ąřūʻ@", sut.sortText(text: "P@rAngar1cu÷iRImîçūąřoʻ"))
   }
 }
