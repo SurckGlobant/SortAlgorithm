@@ -31,6 +31,14 @@ class SortTextUseCase: SortTextUseCaseProtocol{
   }
   
   private func shouldComeBefore(char1: Character, char2: Character) -> Bool {
+    
+    let specialCharacters = "!@#$%^&*()_+-=[]{}|;':\",./<>?"
+
+    //Added validation for special characters
+    if specialCharacters.contains(char1) || specialCharacters.contains(char2) {
+      return !specialCharacters.contains(char1)
+    }
+    
     if char1.isLetter && char2.isLetter {                  //If both characters are letters
       if char1.isLowercase && char2.isUppercase {               //If character1 is lowercase and character2 is uppercase
         return true
