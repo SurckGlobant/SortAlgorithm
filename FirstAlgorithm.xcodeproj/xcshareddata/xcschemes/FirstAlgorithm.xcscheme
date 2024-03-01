@@ -39,6 +39,11 @@
                BlueprintName = "FirstAlgorithmTests"
                ReferencedContainer = "container:FirstAlgorithm.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TicTacToeTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO"

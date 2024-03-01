@@ -5,7 +5,7 @@
 //  Created by David Bautista on 27/02/24.
 //
 
-//MARK: - AlgorithmViewModel - class
+//MARK: - SortAlgorithmViewModel - class
 
 final class SortAlgorithmViewModel: SortAlgorithmViewModelProtocol{
   

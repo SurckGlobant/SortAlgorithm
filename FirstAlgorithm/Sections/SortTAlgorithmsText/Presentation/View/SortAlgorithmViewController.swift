@@ -47,7 +47,7 @@ final class SortAlgorithmViewController: UIViewController {
   
   let resultLabel: UILabel = {
     let label = UILabel()
-    label.text = "Result: "
+    label.text = ""
     label.textAlignment = .left
     label.numberOfLines = 0
     label.translatesAutoresizingMaskIntoConstraints = false

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127458A52B91140D0042F96C /* TicTacToeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458A42B91140D0042F96C /* TicTacToeViewModelProtocol.swift */; };
+		127458A92B91156B0042F96C /* TicTacToeUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458A82B91156B0042F96C /* TicTacToeUseCaseProvider.swift */; };
+		127458AC2B911E7B0042F96C /* TicTacToeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458AB2B911E7B0042F96C /* TicTacToeUseCase.swift */; };
+		127458B02B911FAE0042F96C /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458AF2B911FAE0042F96C /* TicTacToeViewController.swift */; };
+		127458B22B9120CF0042F96C /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458B12B9120CF0042F96C /* TicTacToeViewModel.swift */; };
+		127458B52B915E7F0042F96C /* PlayerTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458B42B915E7F0042F96C /* PlayerTurn.swift */; };
+		127458B72B915EA10042F96C /* ConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458B62B915EA10042F96C /* ConversionError.swift */; };
+		127458B92B91609B0042F96C /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127458B82B91609B0042F96C /* TicTacToeTests.swift */; };
 		127E39C02B8FC06F0004231B /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E39BF2B8FC06F0004231B /* PageViewModel.swift */; };
 		127E39C62B8FC8550004231B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E39C52B8FC8550004231B /* PageViewController.swift */; };
 		127E39C92B8FD0700004231B /* PageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E39C82B8FD0700004231B /* PageViewModelProtocol.swift */; };
@@ -50,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		127458A42B91140D0042F96C /* TicTacToeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModelProtocol.swift; sourceTree = "<group>"; };
+		127458A82B91156B0042F96C /* TicTacToeUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUseCaseProvider.swift; sourceTree = "<group>"; };
+		127458AB2B911E7B0042F96C /* TicTacToeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUseCase.swift; sourceTree = "<group>"; };
+		127458AF2B911FAE0042F96C /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		127458B12B9120CF0042F96C /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
+		127458B42B915E7F0042F96C /* PlayerTurn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTurn.swift; sourceTree = "<group>"; };
+		127458B62B915EA10042F96C /* ConversionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionError.swift; sourceTree = "<group>"; };
+		127458B82B91609B0042F96C /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		127E39BF2B8FC06F0004231B /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
 		127E39C52B8FC8550004231B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		127E39C82B8FD0700004231B /* PageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -104,6 +120,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		127458A32B91135F0042F96C /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				127458A82B91156B0042F96C /* TicTacToeUseCaseProvider.swift */,
+				127458A72B9115570042F96C /* Domain */,
+				127458A62B91154F0042F96C /* Presentation */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		127458A62B91154F0042F96C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				127458AE2B911F0A0042F96C /* View */,
+				127458AD2B911F010042F96C /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		127458A72B9115570042F96C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				127458A42B91140D0042F96C /* TicTacToeViewModelProtocol.swift */,
+				127458B32B915E790042F96C /* Enums */,
+				127458AA2B911E6F0042F96C /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		127458AA2B911E6F0042F96C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				127458AB2B911E7B0042F96C /* TicTacToeUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		127458AD2B911F010042F96C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				127458B12B9120CF0042F96C /* TicTacToeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		127458AE2B911F0A0042F96C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				127458AF2B911FAE0042F96C /* TicTacToeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		127458B32B915E790042F96C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				127458B42B915E7F0042F96C /* PlayerTurn.swift */,
+				127458B62B915EA10042F96C /* ConversionError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		127E39BE2B8FC0620004231B /* PageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +316,7 @@
 			children = (
 				12A3748B2B8E7B700011104D /* SortAlgorithmTests.swift */,
 				127E39D92B8FE1E50004231B /* ParenthesesReviewTests.swift */,
+				127458B82B91609B0042F96C /* TicTacToeTests.swift */,
 			);
 			path = FirstAlgorithmTests;
 			sourceTree = "<group>";
@@ -307,6 +386,7 @@
 				127E39BE2B8FC0620004231B /* PageView */,
 				12A374B32B8E8C4E0011104D /* SortTAlgorithmsText */,
 				127E39C12B8FC4A70004231B /* ParenthesesReview */,
+				127458A32B91135F0042F96C /* TicTacToe */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -458,16 +538,23 @@
 				12A374AE2B8E7CFB0011104D /* SortAlgorithmViewModel.swift in Sources */,
 				12A374B12B8E8A5A0011104D /* SortTextUseCase.swift in Sources */,
 				12A374792B8E7B6E0011104D /* SortAlgorithmViewController.swift in Sources */,
+				127458B02B911FAE0042F96C /* TicTacToeViewController.swift in Sources */,
+				127458B72B915EA10042F96C /* ConversionError.swift in Sources */,
 				127E39D82B8FDF890004231B /* ParenthesesReviewViewModel.swift in Sources */,
 				12A374A62B8E7BF30011104D /* AlgorithmFactory.swift in Sources */,
+				127458A92B91156B0042F96C /* TicTacToeUseCaseProvider.swift in Sources */,
+				127458B52B915E7F0042F96C /* PlayerTurn.swift in Sources */,
 				127E39C62B8FC8550004231B /* PageViewController.swift in Sources */,
 				12A374B52B8E8C5F0011104D /* SortTextmUseCaseProvider.swift in Sources */,
 				12A374752B8E7B6E0011104D /* AppDelegate.swift in Sources */,
 				127E39D42B8FDD7F0004231B /* ParenthesesReviewUseCase.swift in Sources */,
+				127458A52B91140D0042F96C /* TicTacToeViewModelProtocol.swift in Sources */,
 				127E39D62B8FDE900004231B /* ParenthesesReviewViewController.swift in Sources */,
 				127E39C02B8FC06F0004231B /* PageViewModel.swift in Sources */,
+				127458B22B9120CF0042F96C /* TicTacToeViewModel.swift in Sources */,
 				127E39C92B8FD0700004231B /* PageViewModelProtocol.swift in Sources */,
 				12A374772B8E7B6E0011104D /* SceneDelegate.swift in Sources */,
+				127458AC2B911E7B0042F96C /* TicTacToeUseCase.swift in Sources */,
 				127E39D12B8FDCDC0004231B /* ParenthesesReviewViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A3748C2B8E7B700011104D /* SortAlgorithmTests.swift in Sources */,
+				127458B92B91609B0042F96C /* TicTacToeTests.swift in Sources */,
 				127E39DA2B8FE1E50004231B /* ParenthesesReviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

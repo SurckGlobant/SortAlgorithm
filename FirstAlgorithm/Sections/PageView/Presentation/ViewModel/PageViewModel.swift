@@ -16,8 +16,9 @@ class PageViewModel: PageViewModelProtocol{
   
   //MARK: - Init
   init() {
-  viewControllers = [AlgorithmFactory().algorithmViewController(),
-                       AlgorithmFactory().parenthesesReviewController() ]
+    viewControllers = [AlgorithmFactory().algorithmViewController(),
+                       AlgorithmFactory().parenthesesReviewController(),
+                       AlgorithmFactory().ticaTacToeController()]
   }
   
   //MARK: - Methods

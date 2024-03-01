@@ -32,4 +32,12 @@ public final class AlgorithmFactory{
     let vc: UIViewController = ParenthesesReviewViewController(viewModel: viewModel)
     return vc
   }
+  
+  func ticaTacToeController() -> UIViewController{
+    let provider:TicTacToeUseCaseProvider = TicTacToeUseCaseProvider()
+    let useCases: TicTacToeViewModel.UseCases = provider.provide()
+    let viewModel:TicTacToeViewModelProtocol = TicTacToeViewModel(useCases: useCases)
+    let vc: UIViewController = TicTacToeViewController(viewModel: viewModel)
+    return vc
+  }
 }
